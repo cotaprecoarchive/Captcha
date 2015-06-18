@@ -10,7 +10,8 @@ use CotaPreco\Captcha\CaptchaSolutionInterface;
 interface CanReportIncorrectlySolved
 {
     /**
-     * @param CaptchaSolutionInterface $solution
+     * @param  CaptchaSolutionInterface $solution
+     * @return boolean
      */
     public function incorrectlySolved(CaptchaSolutionInterface $solution);
 }

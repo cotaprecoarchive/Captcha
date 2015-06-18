@@ -12,7 +12,7 @@ interface CaptchaSolverInterface
 {
     /**
      * @param  CaptchaInterface $captcha
-     * @return CaptchaSolutionInterface
+     * @return false|CaptchaSolutionInterface
      */
     public function requestSolutionForCaptcha(CaptchaInterface $captcha);
 }
