@@ -19,11 +19,13 @@ final class DeathByCaptchaFactory
         UsernamePasswordCredentials $credentials,
         PullPreferences $preferences
     ) {
-        return new OnlyBase64AndFilesystemImageCaptcha(
-            new TransformFilesystemImageToBase64(
-                new DeathByCaptcha(
-                    $credentials,
-                    $preferences
+        return new OnServiceUnavailable(
+            new OnlyBase64AndFilesystemImageCaptcha(
+                new TransformFilesystemImageToBase64(
+                    new DeathByCaptcha(
+                        $credentials,
+                        $preferences
+                    )
                 )
             )
         );
