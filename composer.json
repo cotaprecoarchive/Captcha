@@ -1,6 +1,15 @@
 {
     "name": "cotapreco/captcha",
-    "description": "Our utilities for CAPTCHA solving",
+    "description": "Our library for CAPTCHA solving (through third-party services, DeathByCaptcha)",
+    "keywords": [
+        "captcha",
+        "solving",
+        "dbc",
+        "deathbycaptcha",
+        "crawler",
+        "bypass"
+    ],
+    "license": "MIT",
     "authors": [
         {
             "name": "Andrey K. Vital",
