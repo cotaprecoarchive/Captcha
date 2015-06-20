@@ -144,7 +144,12 @@ class DeathByCaptcha implements DeathByCaptchaInterface
             return false;
         }
 
-        $this->httpClient->post('/api/captcha/' . $solution->getCaptchaId() . '/report');
+        $this->httpClient->post('/api/captcha/' . $solution->getCaptchaId() . '/report', [
+            'body' => [
+                'username' => $this->credentials->getUsername(),
+                'password' => $this->credentials->getPassword()
+            ]
+        ]);
 
         return true;
     }
